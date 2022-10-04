@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from PyQt5 import QtWidgets, uic, QtTest
+from PyQt5 import QtWidgets, uic, QtTest, QtGui
 from PyQt5.QtGui import QFontDatabase
 import requests
 import time
@@ -11,6 +11,7 @@ import random
 os.chdir(sys._MEIPASS)
 design = 'Summon\\design.ui'
 font = 'Summon\\font\\clacon2.ttf'
+icon = 'Summon\\images\\icon.ico'
 
 
 class Ui(QtWidgets.QMainWindow):
@@ -18,6 +19,7 @@ class Ui(QtWidgets.QMainWindow):
 		super(Ui, self).__init__()  # Call the inherited classes __init__ method
 		uic.loadUi(design, self)  # Load the .ui file
 		QFontDatabase.addApplicationFont(font)
+		self.setWindowIcon(QtGui.QIcon(icon))
 		self.show()  # Show the GUI
 		self.checkNet()
 
@@ -64,6 +66,7 @@ class Ui(QtWidgets.QMainWindow):
 		if code == "cls":
 			self.lineEdit.setText("")  # cls
 			self.textBrowser.clear()  # cls
+			self.control(True)
 			return
 		url = "https://raw.githubusercontent.com/MadoiSMind/mindfolderiopetiowp/main/Memory/"
 		url2 = url + code + ".txt"

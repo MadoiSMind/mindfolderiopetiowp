@@ -8,7 +8,7 @@ a = Analysis(
     ['Summon.py'],
     pathex=[],
     binaries=[],
-    datas=[('design.ui', 'Summon'), ('font/clacon2.ttf', 'Summon/font')],
+    datas=[('design.ui', 'Summon'), ('font/clacon2.ttf', 'Summon/font'), ('images/icon.ico', 'Summon/images')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -41,5 +41,6 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='images\\icon.ico'
 
 )
