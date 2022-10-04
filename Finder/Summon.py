@@ -65,7 +65,7 @@ class Ui(QtWidgets.QMainWindow):
 			self.lineEdit.setText("")  # cls
 			self.textBrowser.clear()  # cls
 			return
-		url = "https://raw.githubusercontent.com/MadoiSMind/mindfolderiopetiowp/main/"
+		url = "https://raw.githubusercontent.com/MadoiSMind/mindfolderiopetiowp/main/Memory/"
 		url2 = url + code + ".txt"
 		page = requests.get(url2)
 		self.soup = BeautifulSoup(page.text, "html.parser")
