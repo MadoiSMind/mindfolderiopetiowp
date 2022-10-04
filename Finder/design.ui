@@ -134,7 +134,7 @@ border: 1px solid orange;
         <string notr="true"/>
        </property>
        <property name="maxLength">
-        <number>12</number>
+        <number>40</number>
        </property>
        <property name="frame">
         <bool>true</bool>

@@ -50,7 +50,7 @@ class Ui(QtWidgets.QMainWindow):
 		if page.status_code == 200:
 			self.textBrowser.append(f"[{self.t()}] Code: {code} - founded. Reading...")
 			QtTest.QTest.qWait(random.randint(1000, 3000))
-			self.textBrowser.append(f"[{self.t()}] ˅ Read ˅ \n\n{self.soup.get_text()}")
+			self.textBrowser.append(f"[{self.t()}] ˅ Read ˅ \n\n{self.soup.get_text()}\n")
 			self.control(True)
 		elif page.status_code == 400:
 			self.textBrowser.append(f"[{self.t()}] Code: {code} - invalid")
