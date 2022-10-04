@@ -43,7 +43,6 @@ class Ui(QtWidgets.QMainWindow):
 		self.lineEdit.setReadOnly(not state)
 
 	def create_message(self, page, code):
-		self.control(False)
 		if page.status_code == 200:
 			self.textBrowser.append(f"[{self.t()}] Code: {code} - founded. Reading...")
 			QtTest.QTest.qWait(random.randint(1000,3000))
@@ -59,6 +58,7 @@ class Ui(QtWidgets.QMainWindow):
 			self.control(True)
 		
 	def on_click(self):
+		self.control(False)
 		code = self.lineEdit.text()
 		self.lineEdit.setText("")
 		if code == "cls":
