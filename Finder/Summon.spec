@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='Mind Finder',
+    name='Madoi\'s Memory',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
